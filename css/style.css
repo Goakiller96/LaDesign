@@ -445,7 +445,7 @@ body::after {
 .spollers__title::after {
   content: "";
   position: absolute;
-  background-image: url(../../img/spoller-arrow.svg);
+  background-image: url(../../img/icon_down.svg);
   background-repeat: no-repeat;
   right: 10px;
   top: 50%;
