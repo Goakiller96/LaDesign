@@ -420,15 +420,13 @@ body::after {
   cursor: pointer;
 }
 
-.no-webp ._spoller-init .spollers__title::before, .no-webp ._spoller-init .spollers__title::after{
-  background-image: url(../../img/up-btn.png); }
-
 ._spoller-init .spollers__title::before,
 ._spoller-init .spollers__title::after {
   content: "";
   position: absolute;
   right: 10px;
   top: 50%;
+  background-image: url(../../img/arrow__popup.svg);
   background-repeat: no-repeat;
   height: 30px;
   width: 31px;
@@ -3232,5 +3230,3 @@ button.swiper-pagination-bullet {
     color: #393246;
   }
 }
-
-.webp ._spoller-init .spollers__title::before, .webp ._spoller-init .spollers__title::after{ background-image: url(../../img/up-btn.webp); }
