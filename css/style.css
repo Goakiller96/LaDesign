@@ -1173,7 +1173,6 @@ body::after {
   position: relative;
 }
 
-.block._spoller-init .block__title::before,
 .block._spoller-init .block__title::after {
   content: "";
   position: absolute;
@@ -1186,6 +1185,12 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.block._spoller-init .block__title._spoller-active::after {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 @supports (padding-top: clamp( 3.125rem , 0.9271978022rem  +  10.989010989vw , 9.375rem )) {
