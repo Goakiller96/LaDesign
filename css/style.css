@@ -399,50 +399,34 @@ body::after {
 .spollers {
   display: -ms-grid;
   display: grid;
-  max-width: 32.0625rem;
-  width: 100%;
+  gap: 15px;
 }
 
 .spollers__item {
   font-size: 1.25rem;
-  line-height: 1.35;
-  max-width: 32.0625rem;
-  border-top: 1px solid #D5D5D5;
-}
-
-.spollers__item:last-child {
-  border-bottom: 1px solid #D5D5D5;
 }
 
 .spollers__title {
   width: 100%;
-  position: relative;
   cursor: default;
   text-align: left;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 300;
-  padding: 1.5625rem 0rem;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  border: 1px solid #eee;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.3125rem;
+  position: relative;
 }
 
-.spollers__title:hover {
-  color: #393246;
-}
-
-.spollers .spollers__title {
+._spoller-init .spollers__title {
   cursor: pointer;
 }
 
-.spollers._spoller-init .spollers__title::after {
+._spoller-init .spollers__title::after {
   content: "";
   position: absolute;
   background-image: url(../../img/spoller-arrow.svg);
   background-repeat: no-repeat;
   right: 10px;
-  top: 0;
+  top: 50%;
   height: 30px;
   width: 31px;
   -webkit-transition: -webkit-transform 0.5s ease 0s;
@@ -452,13 +436,22 @@ body::after {
   transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
+._spoller-init .spollers__title::after {
+  -webkit-transform: translate(0, -50%) rotate(-40deg);
+      -ms-transform: translate(0, -50%) rotate(-40deg);
+          transform: translate(0, -50%) rotate(-40deg);
+}
+
+._spoller-init .spollers__title._spoller-active::after {
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
 .spollers__body {
-  padding: 1.25rem 0.625rem 1.25rem 0rem;
+  padding: 1.25rem;
   border-radius: 0.3125rem;
-  max-width: 27.9375rem;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5;
+  border: 1px solid #eee;
 }
 
 [data-showmore-button] span:last-child {
@@ -2874,10 +2867,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 65em) {
-  .spollers {
-    margin: 0 auto;
-  }
-
   .describe {
     padding: 3.125rem 0px 3.125rem 0px;
   }
@@ -2997,10 +2986,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 61.99875em) {
-  .spollers {
-    margin-bottom: 1.875rem;
-  }
-
   .up__btn {
     display: none;
   }
@@ -3240,13 +3225,6 @@ button.swiper-pagination-bullet {
   .portfolio__items {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media (max-width: 29.99875em) {
-  .spollers__title {
-    font-size: 1rem;
-    padding-right: 45px;
   }
 }
 
