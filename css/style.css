@@ -420,44 +420,23 @@ body::after {
   cursor: pointer;
 }
 
+.no-webp ._spoller-init .spollers__title::before, .no-webp ._spoller-init .spollers__title::after{
+  background-image: url(../../img/up-btn.png); }
+
 ._spoller-init .spollers__title::before,
 ._spoller-init .spollers__title::after {
   content: "";
   position: absolute;
   right: 10px;
   top: 50%;
-  background-color: #000;
-  height: 2px;
-  width: 15px;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 31px;
   -webkit-transition: -webkit-transform 0.5s ease 0s;
   transition: -webkit-transform 0.5s ease 0s;
   -o-transition: transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-}
-
-._spoller-init .spollers__title::before {
-  -webkit-transform: translate(-75%, -50%) rotate(40deg);
-      -ms-transform: translate(-75%, -50%) rotate(40deg);
-          transform: translate(-75%, -50%) rotate(40deg);
-}
-
-._spoller-init .spollers__title::after {
-  -webkit-transform: translate(0, -50%) rotate(-40deg);
-      -ms-transform: translate(0, -50%) rotate(-40deg);
-          transform: translate(0, -50%) rotate(-40deg);
-}
-
-._spoller-init .spollers__title._spoller-active::before {
-  -webkit-transform: translateX(-75%) rotate(-40deg);
-      -ms-transform: translateX(-75%) rotate(-40deg);
-          transform: translateX(-75%) rotate(-40deg);
-}
-
-._spoller-init .spollers__title._spoller-active::after {
-  -webkit-transform: rotate(40deg);
-      -ms-transform: rotate(40deg);
-          transform: rotate(40deg);
 }
 
 .spollers__body {
@@ -3253,3 +3232,5 @@ button.swiper-pagination-bullet {
     color: #393246;
   }
 }
+
+.webp ._spoller-init .spollers__title::before, .webp ._spoller-init .spollers__title::after{ background-image: url(../../img/up-btn.webp); }
