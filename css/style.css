@@ -416,6 +416,7 @@ body::after {
 
 .spollers__title {
   width: 100%;
+  position: relative;
   cursor: default;
   text-align: left;
   letter-spacing: 0.12em;
@@ -425,7 +426,6 @@ body::after {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  position: relative;
 }
 
 .spollers__title:hover {
@@ -436,16 +436,10 @@ body::after {
   cursor: pointer;
 }
 
-.spollers .spollers__title._spoller-active::after {
-  -webkit-transform: translateY(-50%) rotate(-90deg);
-      -ms-transform: translateY(-50%) rotate(-90deg);
-          transform: translateY(-50%) rotate(-90deg);
-}
-
-.spollers__title::after {
+.spollers._spoller-init .spollers__title::after {
   content: "";
   position: absolute;
-  background-image: url(../../img/icon_down.svg);
+  background-image: url(../../img/spoller-arrow.svg);
   background-repeat: no-repeat;
   right: 10px;
   top: 50%;
@@ -459,6 +453,12 @@ body::after {
   -o-transition: transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+
+.spollers._spoller-init .spollers__title._spoller-active::after {
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+      -ms-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
 }
 
 .spollers__body {
@@ -1176,7 +1176,7 @@ body::after {
 .block._spoller-init .block__title::after {
   content: "";
   position: absolute;
-  width: 30px;
+  width: 31px;
   height: 30px;
   background-image: url(../img/spoller-arrow.svg);
   background-repeat: no-repeat;
