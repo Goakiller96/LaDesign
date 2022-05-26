@@ -4267,6 +4267,15 @@
     };
     const da = new DynamicAdapt("max");
     da.init();
+    $(window).on("scroll", (function() {
+        if ($(window).scrollTop()) $("header").addClass("header__white"); else $("header").removeClass("header__white");
+    }));
+    var header = $(".header__menu-link, .header__link, .header__logo, ._icon-logo:before, .header__link::after");
+    var scrollChange = 1;
+    $(window).scroll((function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= scrollChange) header.addClass("black"); else header.removeClass("black");
+    }));
     /**!
  * MixItUp v3.3.1
  * A high-performance, dependency-free library for animated filtering, sorting and more
