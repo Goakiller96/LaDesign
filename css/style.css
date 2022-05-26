@@ -508,10 +508,17 @@ body::after {
   padding: 1.875rem 0px 1.875rem 0px;
   z-index: 50;
   border-bottom: 1px solid #777777;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__white {
+  background: #fff;
 }
 
 .header__wrapper {
@@ -569,7 +576,7 @@ body::after {
   bottom: 0;
   left: 0;
   display: block;
-  background-color: #fff;
+  background-color: #eee;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -583,7 +590,11 @@ body::after {
   bottom: 0;
   left: 0;
   display: block;
-  background-color: #fff;
+  background-color: #eee;
+}
+
+.header .black {
+  color: #000;
 }
 
 .header__phone {
@@ -626,7 +637,7 @@ body::after {
   bottom: 0;
   left: 0;
   display: block;
-  background-color: #fff;
+  background-color: #eee;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -640,7 +651,7 @@ body::after {
   bottom: 0;
   left: 0;
   display: block;
-  background-color: #fff;
+  background-color: #eee;
 }
 
 .menu__body {
