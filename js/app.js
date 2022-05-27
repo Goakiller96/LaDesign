@@ -203,8 +203,8 @@
         }
     }
     function menuInit() {
-        if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
-            if (bodyLockStatus && e.target.closest(".icon-menu")) {
+        if (document.querySelector(".icon__menu")) document.addEventListener("click", (function(e) {
+            if (bodyLockStatus && e.target.closest(".icon__menu")) {
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open");
             }
@@ -4270,11 +4270,15 @@
     $(window).on("scroll", (function() {
         if ($(window).scrollTop()) $("header").addClass("header__white"); else $("header").removeClass("header__white");
     }));
-    var header = $(".header__menu-link, .header__link, .header__logo, ._icon-logo:before, .header__link::after");
-    var scrollChange = 1;
+    let header = $(".header__menu-link, .header__link, .header__logo, ._icon-logo:before, .header__link::after");
+    let scrollChange = 1;
+    let menu__body = $(".menu__body");
+    let icon__menu = $(".icon__menu");
     $(window).scroll((function() {
-        var scroll = $(window).scrollTop();
+        let scroll = $(window).scrollTop();
         if (scroll >= scrollChange) header.addClass("black"); else header.removeClass("black");
+        if (scroll >= scrollChange) menu__body.addClass("menu__body-active"); else menu__body.removeClass("menu__body-active");
+        if (scroll >= scrollChange) icon__menu.addClass("icon__menu-active"); else icon__menu.removeClass("icon__menu-active");
     }));
     /**!
  * MixItUp v3.3.1
